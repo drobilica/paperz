@@ -1,0 +1,21 @@
+{% extends "base.html.j2" %}
+{% block content %}
+
+404 - NOT FOUND 
+{% endblock %}
+{% block right_content %}
+
+<div class="grid-menu dark-grey">
+  <div class="vertical-menu ">
+    {% for value in get_news_list %}
+      <a href="/explore/{{ value }}">{{ value }}</a>
+    {% endfor %}
+  </div>
+</div>
+<div class="grid-menu dark-grey">
+    <div class="vertical-menu ">
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "base.html.j2" %}
+{% block content %}
+
+  {% for key,value in entries.iterrows() %}
+
+  <ul>
+      <li>
+           <div class="article_content">
+             <span>{{ value.title|e }}</span>
+             <div class="summary">
+               {{ value.summary|e }}</br>
+               <a href="{{ value.link }}">Read More</a>
+             </div>
+           </div>
+       </li>
+  </ul>
+  {% endfor %}
+{% endblock %}
+{% block right_content %}
+
+<div class="grid-menu dark-grey">
+  <div class="vertical-menu ">
+    {% for value in get_news_list %}
+      <a href="/explore/{{ value }}">{{ value }}</a>
+    {% endfor %}
+  </div>
+</div>
+</br></br></br></br></br>
+<div class="grid-menu dark-grey">
+    <div class="vertical-menu ">
+<a href="/explore/">Weather:{{ weather }}°C </a>
+<a href="/explore/">AIRIQ:{{ airiq }} </a>
+    </div>
+</div>
+
+
+{% endblock %}

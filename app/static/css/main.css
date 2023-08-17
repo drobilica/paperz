@@ -1,0 +1,145 @@
+
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+body {
+  margin: 0;
+}
+
+.grid-header { grid-area: header; }
+.grid-menu { grid-area: menu; }
+.grid-menu-header { grid-area: menu-header; }
+.grid-main { grid-area: main; }
+.grid-sidebar { grid-area: right; }
+.grid-footer { grid-area: footer;}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'menu-header main right'
+    'menu main right'
+    'footer footer footer';
+  grid-gap: 5px;
+  background-color: #ffffff;
+  /* padding: 10px; */
+  min-height: 100vh;
+  grid-template-columns: 250px 1fr 200px;
+  grid-template-rows: 70px
+                      1fr
+                      40px;
+}
+
+/* central fonts  */
+.centrate {
+  font-family: 'Press Start 2P', cursive;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color: white;
+}
+
+.vertical-menu {
+  width: 100%;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.vertical-menu a {
+  color: white;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  outline: 0;
+}
+
+.overflow {
+  overflow-y: auto;
+  height: 96.5vh;
+}
+.vertical-menu a:hover {
+  background-color: #47525F;
+  }
+
+.vertical-menu a.active {
+  background-color: #DA513D;
+  color: white;
+  font-weight: bold;
+}
+
+ .vertical-menu a:active {
+  background-color: #DA513D;
+  color: white;
+  font-weight: bold;
+}
+
+/* Colorisation  */
+
+.light-grey {
+  background-color: #47525F;
+}
+
+.dark-grey {
+  background-color: #333F4E;
+}
+
+.grid-footer a {
+  text-decoration: none;
+  outline: 0;
+  color: #DA513D;
+}
+
+
+/* sample lists  */
+
+
+ul {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-family: arial;
+    list-style: none;
+    padding: 0;
+    background: #4a90e2;
+    border-radius: 5px;
+    padding: 6px;
+}
+ul li {
+    background: #285b97;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    /*flex-direction: row-reverse;*/
+
+    justify-content: space-between;
+    padding: 5px 10px 5px 5px;
+    margin: 5px;
+}
+
+.article_content span {
+    display: flex;
+    padding: 3px 6px;
+    justify-content: flex-start;
+    color: #285b97;
+    font-size: 14px;
+    align-self: flex-start;
+    text-transform: uppercase;
+    background: #acd2ff;
+    border-radius: 2px;
+    letter-spacing: 1px;
+    /*width: 100%*/
+}
+
+.article_content img {
+  height: 150px;
+}
+
+.article_content {
+  width:100%;
+}
+
+.article_content a {
+  align: right;
+}
+
+.summary {
+  padding: 3px 6px;
+
+}

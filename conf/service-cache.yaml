@@ -1,0 +1,22 @@
+cache:
+  airiq:
+    mtime: 1585862774.5189815
+    value: 132
+  weather:
+    mtime: 1585862775.9877841
+    value: 4
+  rss:
+    news:
+      political:
+        mtime:
+      tech:
+        mtime:
+      hax:
+        mtime:
+      serbia_news:
+        mtime:
+      games:
+        mtime:
+      best_rss:
+        mtime:
+

@@ -1,0 +1,30 @@
+news:
+  political:
+    url:
+      - "http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/front_page/rss.xml"
+      - "http://feeds.feedburner.com/TechCrunch/"
+    mtime:       
+  tech:
+    url:
+      - "https://distrowatch.com/news/dw.xml"
+    mtime:       
+  hax:
+    url:
+      - "https://www.psxhax.com/articles/index.rss"
+    mtime:       
+  serbia_news:
+    url:
+      - "http://www.politika.rs/rss/"
+      - "http://rs.n1info.com/rss/249/Naslovna"
+    mtime:       
+  games:
+    url:
+      - "https://www.gamasutra.com/blogs/rss/"
+      - "https://www.eurogamer.net/?format=rss&type=article"
+    mtime:       
+  best_rss:
+    url:
+      - "https://www.reddit.com/r/worldnews/.rss"
+      - "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/world/rss.xml"
+      - "http://rss.cnn.com/rss/edition_world.rss"
+    mtime:

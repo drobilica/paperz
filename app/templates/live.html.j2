@@ -1,0 +1,17 @@
+{% extends "base.html.j2" %}
+{% block content %}
+
+  {% for entry in entries %}
+  <ul>
+      <li>
+           <div class="article_content">
+             <span>{{entry.title}}</span>
+             <div class="shortsummary">
+               {{entry.content}}
+               <a href="{{ entry.link }}">Read More</a>
+             </div>
+           </div>{{entry.img}}
+       </li>
+  </ul>
+  {% endfor %}
+{% endblock %}
