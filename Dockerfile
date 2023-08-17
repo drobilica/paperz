@@ -4,7 +4,6 @@ FROM python:3.8-alpine
 # Upgrade pip as root
 RUN pip install --upgrade pip
 
-
 # Switch working directory
 WORKDIR /app
 
@@ -18,4 +17,4 @@ RUN pip install -r requirements.txt
 COPY . /app
 
 # Configure the container to run in an executed manner
-ENTRYPOINT [ "python", "reader.py" ]
+ENTRYPOINT [ "flask", "run" ]
