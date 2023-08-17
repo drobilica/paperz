@@ -50,10 +50,18 @@ def load_airiq():
     else:
         print('loading airiq because 600 secs have passed')
         endpoint = "https://api.airvisual.com/v2/city?city=Belgrade&state=central-serbia&country=serbia&key=API_KEY_HERE"
-        r = requests.get(endpoint)    
+        r = requests.get(endpoint)
         content = r.json()
-        make_cache('airiq', 'value', content['data']['current']['pollution']['aqius'])
+
+        try:
+            aqius_value = content['data']['current']['pollution']['aqius']
+        except KeyError:
+            print("Error: 'current' key not found in content['data']. Using default value.")
+            aqius_value = None  # You can set a default value here if needed
+
+        make_cache('airiq', 'value', aqius_value)
         return load_cache_value('airiq')
+
 
 
 def load_weather():
@@ -62,9 +70,15 @@ def load_weather():
         return load_cache_value('weather')
     else:
         endpoint = "https://api.openweathermap.org/data/2.5/weather?id=792680&appid=API_KEY_HERE"
-        r = requests.get(endpoint)    
+        r = requests.get(endpoint)
         content = r.json()
-        temp = content['main']['temp'] - 273.15
-        make_cache('weather', 'value', round(temp))
+
+        try:
+            temp = content['main']['temp'] - 273.15
+        except KeyError:
+            print("Error: 'temp' key not found in content['main']. Using default value.")
+            temp = None  # You can set a default value here if needed
+
+        make_cache('weather', 'value', round(temp) if temp is not None else None)
         print('loading weather because 16 secs have passed')
         return load_cache_value('weather')

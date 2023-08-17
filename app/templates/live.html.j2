@@ -5,12 +5,12 @@
   <ul>
       <li>
            <div class="article_content">
-             <span>{{entry.title}}</span>
+             <span>{{ entry['title'] }}</span>
              <div class="shortsummary">
-               {{entry.content}}
-               <a href="{{ entry.link }}">Read More</a>
+               {{ entry['content'] }}
+               <a href="{{ entry['link'] }}">Read More</a>
              </div>
-           </div>{{entry.img}}
+           </div>{{ entry['img'] }}
        </li>
   </ul>
   {% endfor %}

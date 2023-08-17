@@ -1,20 +1,20 @@
 {% extends "base.html.j2" %}
 {% block content %}
 
-  {% for key,value in entries.iterrows() %}
-
+{% for entry in entries %}
   <ul>
       <li>
            <div class="article_content">
-             <span>{{ value.title|e }}</span>
+             <span>{{ entry['title']|e }}</span>
              <div class="summary">
-               {{ value.summary|e }}</br>
-               <a href="{{ value.link }}">Read More</a>
+               {{ entry['summary']|e }}</br>
+               <a href="{{ entry['link'] }}">Read More</a>
              </div>
            </div>
        </li>
   </ul>
-  {% endfor %}
+{% endfor %}
+
 {% endblock %}
 {% block right_content %}
 
